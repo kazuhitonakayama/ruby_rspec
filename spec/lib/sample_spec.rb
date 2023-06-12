@@ -20,15 +20,13 @@ describe ClosedRange do
       end
     end
 
-    describe '小数を引数に渡す' do
-      example '下端として3.4、上端として4.4を渡せばNotIntegerValueIsProvided例外を返す' do
-        expect(closed_range.display_range_array(3.4, 4.4)).to eq NotIntegerValueIsProvided
-      end
-    end
-
     describe '数字ではない値を引数に渡す' do
       example '下端に"あ"、上端に"1"を渡せばNotIntegerValueIsProvided例外を返す' do
         expect(closed_range.display_range_array('あ', '1')).to eq NotIntegerValueIsProvided
+      end
+
+      example '下端として3.4、上端として4.4を渡せばNotIntegerValueIsProvided例外を返す' do
+        expect(closed_range.display_range_array(3.4, 4.4)).to eq NotIntegerValueIsProvided
       end
     end
   end
