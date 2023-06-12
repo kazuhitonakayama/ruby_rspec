@@ -21,7 +21,8 @@ describe ClosedRange do
     end
 
     describe '小数を引数に渡す' do
-      example 'を渡せば' do
+      example '下端として3.4、上端として4.4を渡せば' do
+        expect(closed_range.display_range_array(3.4, 4.4)).to eq FloatNotAllowedError
       end
     end
 
