@@ -1,8 +1,8 @@
 describe ClosedRange do
   describe '#display_range_array' do
     describe '整数の下端と上端（下端 < 上端）を引数に渡す' do
-      example '下端として-1、上端として3を渡せば[-1, 3]を返す' do
-        expect(ClosedRange.new(-1, 3).display_range_array).to eq [-1, 3]
+      example '下端として-1、上端として3を渡せば[-1,3]を返す' do
+        expect(ClosedRange.new(-1, 3).display_range_array).to eq [-1,3]
       end
     end
 
