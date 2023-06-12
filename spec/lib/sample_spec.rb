@@ -26,41 +26,32 @@ describe ClosedRange do
       end
     end
 
-    describe '数字の文字列を引数に渡す' do
-      example 'を渡せば' do
-      end
-    end
-
-    describe '数字ではない文字列を引数に渡す' do
-      example 'を渡せば' do
+    describe '数字ではない値を引数に渡す' do
+      example '下端に"あ"、上端に"1"を渡せばStarndardErrorを返す' do
+        expect(closed_range.display_range_array('あ', '1')).to eq NotIntegerValueIsProvided
       end
     end
   end
 
   describe '#is_within_range' do
     describe '小数を引数に渡す' do
-      example '' do
-      end
+      example ''
     end
 
     describe '数字の文字列を引数に渡す' do
-      example '' do
-      end
+      example ''
     end
 
     describe '数字ではない文字列を引数に渡す' do
-      example '' do
-      end
+      example ''
     end
 
     describe '' do
-      example '' do
-      end
+      example ''
     end
 
     describe '' do
-      example '' do
-      end
+      example ''
     end
   end
 end

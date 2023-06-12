@@ -1,6 +1,9 @@
 class FloatNotAllowedError < StandardError
 end
 
+class NotIntegerValueIsProvided < StandardError
+end
+
 class ClosedRange
   def display_range_array(start_point, end_point)
     return [start_point] if start_point == end_point
