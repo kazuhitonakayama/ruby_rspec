@@ -12,6 +12,10 @@ describe ClosedRange do
       example '下端として3、上端として1を渡せば' do
         expect(closed_range.display_range_array(3, 1)).to eq StandardError
       end
+
+      example '下端として3、上端として-1を渡せば' do
+        expect(closed_range.display_range_array(3, 1)).to eq StandardError
+      end
     end
 
     describe '下端と上端が等しい' do
