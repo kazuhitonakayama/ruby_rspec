@@ -7,7 +7,7 @@ describe ClosedRange do
     end
 
     describe '上端よりも下端が大きい' do
-      example '下端として3、上端として1を渡せばStandardErrorを返す' do
+      example '下端として3、上端として1を渡せば InvertedRangeError を返す' do
         expect{ ClosedRange.new(3, 1).display_range_array }.to raise_error(InvertedRangeError)
       end
     end
@@ -19,11 +19,11 @@ describe ClosedRange do
     end
 
     describe '整数ではない値を引数に渡す' do
-      example '下端に"あ"、上端に"1"を渡せばNotIntegerValueIsProvided例外を返す' do
+      example '下端に"あ"、上端に"1"を渡せば NotIntegerValueIsProvided 例外を返す' do
         expect{ ClosedRange.new('あ', '1').display_range_array }.to raise_error(NotIntegerValueIsProvided)
       end
 
-      example '下端として3.4、上端として4.4を渡せばNotIntegerValueIsProvided例外を返す' do
+      example '下端として3.4、上端として4.4を渡せば NotIntegerValueIsProvided 例外を返す' do
         expect{ ClosedRange.new(3.4, 4.4).display_range_array }.to raise_error(NotIntegerValueIsProvided)
       end
     end
