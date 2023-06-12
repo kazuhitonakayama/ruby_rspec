@@ -1,6 +1,3 @@
-class FloatNotAllowedError < StandardError
-end
-
 class NotIntegerValueIsProvided < StandardError
 end
 
