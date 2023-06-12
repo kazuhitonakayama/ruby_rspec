@@ -2,7 +2,7 @@ describe ClosedRange do
   let(:closed_range){ ClosedRange.new }
 
   describe '#display_range_array' do
-    describe '整数の下端と上端（下端 < 上端）を引数に渡せば、下端と上端を値にもつArrayを返す' do
+    describe '整数の下端と上端（下端 < 上端）を引数に渡す' do
       example '下端として1、上端として3を渡せば[1, 3]を返す' do
         expect(closed_range.display_range_array(1, 3)).to eq [1, 3]
       end
