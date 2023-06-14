@@ -37,8 +37,16 @@ describe ClosedRange do
     context '区間が1点[3,3]のとき' do
       let(:closed_range) { ClosedRange.new(3, 3) }
 
-      example '引数に3を渡す' do
+      example '引数に2を渡すとfalseを返す' do
+        expect(closed_range.is_in_range?(2)).to eq false
+      end
+
+      example '引数に3を渡すとtrueを返す' do
         expect(closed_range.is_in_range?(3)).to eq true
+      end
+
+      example '引数に4を渡すとfalseを返す' do
+        expect(closed_range.is_in_range?(2)).to eq false
       end
     end
   end
