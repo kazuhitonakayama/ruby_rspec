@@ -49,5 +49,29 @@ describe ClosedRange do
         expect(closed_range.is_in_range?(2)).to eq false
       end
     end
+
+    context '区間が1点[2, 6]のとき' do
+      let(:closed_range) { ClosedRange.new(2, 6) }
+
+      example '引数に1を渡すと false を返す' do
+        expect(closed_range.is_in_range?(1)).to eq false
+      end
+
+      example '引数に2を渡すと true を返す' do
+        expect(closed_range.is_in_range?(2)).to eq true
+      end
+
+      example '引数に3を渡すと true を返す' do
+        expect(closed_range.is_in_range?(3)).to eq true
+      end
+
+      example '引数に6を渡すと true を返す' do
+        expect(closed_range.is_in_range?(6)).to eq true
+      end
+
+      example '引数に7を渡すと false を返す' do
+        expect(closed_range.is_in_range?(7)).to eq false
+      end
+    end
   end
 end
