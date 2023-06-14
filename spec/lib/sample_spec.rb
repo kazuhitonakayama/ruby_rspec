@@ -35,10 +35,10 @@ describe ClosedRange do
 
   describe '#is_in_range?' do
     context '区間が1点[3,3]のとき' do
-      let(:closed_range) { ClosedRange.new(-1, 3) }
+      let(:closed_range) { ClosedRange.new(3, 3) }
 
       example '引数に3を渡す' do
-        expect(closed_range.is_in_range?).to eq true
+        expect(closed_range.is_in_range?(3)).to eq true
       end
     end
   end

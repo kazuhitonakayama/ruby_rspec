@@ -19,4 +19,8 @@ class ClosedRange
     return [start_point] if @start_point == @end_point
     [@start_point,@end_point]
   end
+
+  def is_in_range?(number)
+    return number >= @start_point && number <= @end_point
+  end
 end
