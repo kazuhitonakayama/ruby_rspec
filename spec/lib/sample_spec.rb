@@ -48,6 +48,10 @@ describe ClosedRange do
       example '引数に4を渡すとfalseを返す' do
         expect(closed_range.is_in_range?(2)).to eq false
       end
+
+      example '引数に3.4を渡すと NotIntegerValueIsProvided を返す' do
+        expect{ closed_range.is_in_range?(3.4) }.to raise_error NotIntegerValueIsProvided
+      end
     end
 
     context '区間が1点[2, 6]のとき' do
