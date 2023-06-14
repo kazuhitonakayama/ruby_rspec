@@ -21,6 +21,8 @@ class ClosedRange
   end
 
   def is_in_range?(number)
+    raise NotIntegerValueIsProvided unless number.is_a?(Integer)
+
     return number >= @start_point && number <= @end_point
   end
 end
